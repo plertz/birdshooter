@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    user-select: none;
+}
+
+html, body, #wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    background-color: rgb(50, 50, 50);
+}
+
+header{
+    width: 100vw;
+    height: 10vh;
+    background-color: rgb(25, 25, 25);
+    position: relative;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+header h1{
+    color: white;
+    font-weight: 900;
+    font-size: 52px;
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 50%;
+    left: 2.5%;
+    font-style: italic;
+    text-shadow: -14px 7px 3px rgb(38, 57, 77);
+}
+
+.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+
+.container{
+    border: 5px solid black;
+    position: absolute;
+    min-width: 1000px;
+    min-height: 500px;
+    top: 55vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    background-color: (255,255,255);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+canvas{
+    cursor: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: rgb(255,255,255);
+    display: none;
+}
+
+.gameOver, .startMenu, .pause{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+ul{
+ list-style: none;
+}
+
+.gameOver h1{
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.gameOver{
+    background-color: rgb(255,255,255);
+    z-index: 2000;
+    display: none;
+    grid-template-columns: auto 200px auto 380px;
+    grid-template-rows: 100px auto;
+}
+
+.gameOver button{
+    background-color: rgb(25, 25, 25);
+    color: white;
+    font-size: 52px;
+    margin: 10px;
+}
+
+.gameOver button:hover{
+    color: rgb(150, 145, 145);
+    cursor: pointer;
+}
+
+.pause{
+    background-color: rgba(255,255,255, 0.6);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.pause button{
+    display: block;
+    margin-bottom: 20px;;
+    background-color: rgb(29, 24, 24);
+    color: white;
+    width: 200px;
+    font-size:32px;
+    padding: 10px;
+    border-radius: 22px;
+}
+
+.pause button:hover{
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(236, 231, 231, 0.3) 0px 18px 36px -18px inset;
+}
+
+.startMenu{
+    display: grid;
+    grid-template-columns: auto 200px 200px 200px auto;
+    grid-template-rows: auto auto auto auto 60px 50px;
+    grid-gap: 0px 25px;
+}
+
+.startMenu button{
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    grid-column: 4;
+    grid-row: 5;
+    border-radius: 22px;
+    font-weight: 900;
+    transition: 0.5s;
+}
+
+.item1, .item2, .item3{
+    grid-row: 2;
+    position: relative;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+img:hover{
+    cursor: pointer;
+}
+
+.item1{
+    grid-column: 2;
+}
+
+.item2{
+    grid-column: 3;
+}
+
+.item3{
+    grid-column: 4;
+}
+
+.startMenu button:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transform: translate(0, -20px);
+}
+
+.transparent{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 0%;
+    overflow: hidden;
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+.alt{
+    display: none;
+    color: white;
+}
+
+.select{
+    background-color: rgb(143, 143, 238);
+    color: white;
+    padding: 0px;
+    width: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.transparent button:hover{
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(2, 2, 48, 0.25) 0px 30px 60px -12px inset, rgba(2, 2, 48, 0.25) 0px 18px 36px -18px inset;
+}
+
+.info{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 100;
+}
+
+@media screen and (max-width: 1000px){
+    #wrapper{
+        display: none;
+    }
+    .alt{
+        display: block;
+    }
+}
+
+@media screen and (max-height: 600px){
+    #wrapper{
+        display: none;
+    }
+
+    .alt{
+        display: block
+    }
+}

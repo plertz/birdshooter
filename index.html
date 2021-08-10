@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bird Shooter</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <script src="style.js" defer></script>
+    </head>
+    <body onload="selectMap(4)">
+        <div class="alt">Sorry, but your viewport is too small to play this game</div>
+        <div id="wrapper">
+            <header><h1>Bird Shooter</h1></header>
+            <div class="container">
+                <div class="startMenu">
+                    <div class="item1">
+                        <img src="blueSky_background.png" alt="">
+                        <div class="transparent">
+                            <button onclick="selectMap(1)" class="select"></button>
+                        </div>
+                    </div>
+                    <div class="item2">
+                        <img src="greenforest_background.png" onclick="transparent(0)" alt="">
+                        <div class="transparent">
+                            <button onclick="selectMap(2)" class="select"></button>
+                        </div>
+                    </div>
+                    <div class="item3">
+                        <img src="mountain.jpg" alt="">
+                        <div class="transparent">
+                            <button onclick="selectMap(3)" class="select"></button>
+                        </div>
+                    </div>
+                    <button onclick="start()">Start</button>
+                </div>
+                <div class="gameOver">
+                    <h1 style="grid-row: 1; grid-column: 2;">Game Over</h1>
+                    <ul style="grid-row: 2S; grid-column: 2;">
+                       <li class="highscore"></li>
+                       <li class="thisScore"></li>
+                       <li class="kills"></li>
+                       <li class="shots"></li>
+                    </ul>
+                    <button style="grid-column: 4; grid-row: 1 / span 2;" onclick="toStart()">Quit</button>
+                </div>
+                <div class="pause">
+                    <div>
+                        <button onclick="resume()">Resume</button>
+                        <button onclick="toStart()">Quit</button>
+                    </div>
+                </div>
+                <div class="info">
+                    <p id="score"></p>
+                    <p id="lifes"></p>                
+                </div>
+                <canvas id="canvas"></canvas>
+            </div>
+        </div> 
+    </body>     
+</html>
