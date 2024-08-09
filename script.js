@@ -27,7 +27,7 @@ var kills = 0;
 
 var localBackground = localStorage.map;
 var gunShot = new Audio();
-gunShot.src ="gunshot.wav";
+gunShot.src ="assets/gunshot.wav";
 
 canvas.addEventListener('mousemove', (e) =>{
     mouseX = e.x - container.getBoundingClientRect().left;
@@ -106,7 +106,7 @@ class Bird{
         this.draw();
     }
     draw() {
-        this.sprite.src = 'bird_sprite.png';
+        this.sprite.src = 'assets/bird_sprite.png';
         c.drawImage(this.sprite, this.frame, 0, this.width, this.height, this.x, this.y, this.widthOnCanvas, this.heightOnCanvas);
     }
     fall(bird){
@@ -207,7 +207,7 @@ function displayEnd() {
 
 function drawBackground() {
     if (localBackground == undefined) {
-        localBackground = "greenForest_background.png";
+        localBackground = "assets/greenForest_background.png";
     }
     let background = new Image();
     background.src = localBackground;
