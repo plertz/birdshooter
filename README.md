@@ -1,7 +1,7 @@
 # Birdshooter
  DIE BIRDS!!!!!!!!!
 
-**Go to [plertz.github.io](plertz.github.io) to play the game**
+**Go to [plertz.github.io](https://plertz.github.io) to play the game**
 
 
 BirdShooter is a in browser game. The goal is too get the higest score
