@@ -29,7 +29,8 @@ item3.addEventListener("mouseout", () => {
 });
 
 function selectInner() {
-    switch (localStorage.map) {
+    let backgroundName = localStorage.map.replace("assets/", "");
+    switch (backgroundName) {
         case "blueSky_background.png":
             select[0].innerHTML = "Selected";
             select[1].innerHTML = "Select";
@@ -78,6 +79,8 @@ function selectMap(number) {
     if (link == undefined) {
         link = "greenForest_background.png";
     }
+
+    link = "assets/" + link;
     localStorage.setItem("map", link);
     selectInner();
 }
