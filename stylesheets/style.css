@@ -89,6 +89,7 @@ ul{
     display: none;
     grid-template-columns: auto 200px auto 380px;
     grid-template-rows: 100px auto;
+    grid-gap: 50px;
 }
 
 .gameOver button{
